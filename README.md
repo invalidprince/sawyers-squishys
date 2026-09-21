@@ -20,7 +20,7 @@ The file is a JSON list. Add one `{ ... }` block per event:
     "location": "Town Square, Abbottstown, PA",
     "hours": "10:00 AM – 4:00 PM",
     "booth": "Booth 14, near the food trucks",
-    "notes": "New donut squishies this time!"
+    "notes": "New donut squishys this time!"
   }
 ]
 ```
