@@ -1,6 +1,6 @@
 # Sawyer's Squishys 🫧
 
-One-page website for Sawyer's Squishys. Live at **https://invalidprince.github.io/sawyers-squishys/**
+One-page website for Sawyer's Squishys. Live at **https://sawyerssquishys.com/**
 
 Plain HTML/CSS/JS — no frameworks, no build step. Hosted free on GitHub Pages.
 
