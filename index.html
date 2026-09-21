@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sawyer's Squishys — Squish It • Love It</title>
+<meta name="description" content="Sawyer's Squishys — handpicked squishy toys sold at local festivals and markets. Squish It • Love It!">
+<meta name="theme-color" content="#1e2c70">
+<meta property="og:title" content="Sawyer's Squishys">
+<meta property="og:description" content="Squish It • Love It — squishy toys at local festivals and markets.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="hero">
+  <div class="blobs" aria-hidden="true">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <span class="blob b4"></span><span class="blob b5"></span>
+  </div>
+  <div class="hero-inner">
+    <img class="logo" src="assets/logo.png"
+         alt="Sawyer's Squishys logo — navy and rainbow bubble letters with a whale, frog, toast, cat and donut"
+         width="1938" height="812" fetchpriority="high">
+    <p class="tagline">Squish It <span aria-hidden="true">•</span> Love It</p>
+    <p class="blurb">Hi! I'm Sawyer. I sell super-soft, super-cute squishies at festivals and markets. Come find my booth and give one a squish!</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#events">Where to find me</a>
+      <a class="btn btn-ghost" href="#contact">Say hello</a>
+    </div>
+  </div>
+  <div class="wave" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+  <section id="events" class="section" aria-labelledby="events-h">
+    <h2 id="events-h"><span class="emoji" aria-hidden="true">📍</span> Where to find me</h2>
+    <p class="section-sub">Come say hi at these upcoming events!</p>
+    <div id="events-list" class="events" aria-live="polite" aria-busy="true">
+      <p class="loading">Loading events…</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt" aria-labelledby="contact-h">
+    <h2 id="contact-h"><span class="emoji" aria-hidden="true">💌</span> Contact</h2>
+    <p class="section-sub">Questions, custom requests, or want me at your event? Send a note!</p>
+
+    <form id="contact-form" class="card form" novalidate>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required maxlength="100" placeholder="Jane Smith">
+      </div>
+      <div class="field">
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required maxlength="150" placeholder="jane@example.com">
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required maxlength="2000" placeholder="Hi Sawyer! …"></textarea>
+      </div>
+
+      <!-- honeypot: hidden from humans, bots fill it -->
+      <input type="checkbox" name="botcheck" id="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Send message</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Sawyer's Squishys</p>
+  <p class="footer-sub">Squish It • Love It</p>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
