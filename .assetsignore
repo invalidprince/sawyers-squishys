@@ -1,0 +1,11 @@
+node_modules
+.wrangler
+.tmp
+.git
+.gitignore
+.assetsignore
+package.json
+package-lock.json
+deploy.sh
+add_event.sh
+README.md
