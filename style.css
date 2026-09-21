@@ -182,7 +182,7 @@ input[type=text],input[type=email],textarea{
   padding:.8rem .95rem;border:2.5px solid var(--blue-soft);border-radius:var(--radius);
   background:#fbfdff;transition:border-color .15s ease, background .15s ease;
 }
-input::placeholder,textarea::placeholder{color:#9aa1c0;font-weight:500}
+input::placeholder,textarea::placeholder{color:#6b7299;font-weight:500;opacity:1}
 input:focus,textarea:focus{outline:none;border-color:var(--blue);background:#fff}
 input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:var(--pink);background:#fff6fa}
 textarea{resize:vertical;min-height:120px}
