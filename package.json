@@ -8,6 +8,7 @@
     "deploy": "./deploy.sh"
   },
   "devDependencies": {
+    "qrcode": "^1.5.4",
     "wrangler": "^4.135.0"
   }
 }
