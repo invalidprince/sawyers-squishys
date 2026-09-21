@@ -14,14 +14,15 @@
   html,body{margin:0;padding:0;background:#888;}
   .card{
     position:relative; width:3.75in; height:2.25in; overflow:hidden;
-    background:radial-gradient(120% 140% at 15% 0%, #2a3a8f 0%, var(--navy) 45%, var(--navy-deep) 100%);
-    font-family:var(--font); color:#fff;
+    background:#fff;
+    font-family:var(--font); color:var(--navy);
   }
   /* rainbow stripe top edge */
   .stripe{position:absolute;left:0;right:0;top:0;height:.16in;
     background:linear-gradient(90deg,var(--pink) 0 20%,var(--yellow) 20% 40%,var(--green) 40% 60%,var(--blue) 60% 80%,var(--purple) 80% 100%);}
   /* soft blobs */
-  .blob{position:absolute;border-radius:50%;opacity:.16;filter:blur(2px)}
+  .stripe-b{top:auto;bottom:0;height:.1in;opacity:.9}
+  .blob{position:absolute;border-radius:50%;opacity:.13;filter:blur(2px)}
   .b1{width:1.3in;height:1.3in;left:-.45in;bottom:-.55in;background:var(--pink)}
   .b2{width:.9in;height:.9in;right:1.05in;top:-.35in;background:var(--teal)}
   .b3{width:.6in;height:.6in;left:1.45in;bottom:-.2in;background:var(--yellow)}
@@ -30,31 +31,31 @@
   .left{flex:1;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
   .right{width:1.05in;display:flex;flex-direction:column;align-items:center;justify-content:center}
 
-  .hi{font-size:.12in;letter-spacing:.008in;color:var(--cream);margin:0 0 .01in}
-  .tag{font-size:.2in;line-height:1.05;margin:0;font-weight:700;white-space:nowrap}
+  .hi{font-size:.12in;letter-spacing:.008in;color:var(--pink);margin:0 0 .01in}
+  .tag{font-size:.2in;line-height:1.05;margin:0;font-weight:700;white-space:nowrap;color:var(--navy)}
   .tag .dot{color:var(--yellow);padding:0 .035in}
-  .lead{font-size:.1in;line-height:1.3;margin:.05in 0 0;color:#e6e9ff;max-width:2.05in}
+  .lead{font-size:.1in;line-height:1.3;margin:.05in 0 0;color:#3a4270;max-width:2.05in}
 
   .chips{display:flex;flex-wrap:nowrap;gap:.045in;margin:.06in 0 0}
   .chip{font-size:.08in;font-weight:700;padding:.038in .075in;border-radius:.2in;color:var(--navy-deep);white-space:nowrap}
   .c1{background:var(--yellow)} .c2{background:var(--green)} .c3{background:var(--pink);color:#fff}
 
-  .url{margin:0;font-size:.165in;font-weight:700;letter-spacing:.002in;color:#fff;white-space:nowrap}
-  .url span{color:var(--yellow)}
-  .sub{margin:.015in 0 0;font-size:.085in;color:#b9c1f2}
+  .url{margin:0;font-size:.165in;font-weight:700;letter-spacing:.002in;color:var(--navy);white-space:nowrap}
+  .url span{color:var(--pink)}
+  .sub{margin:.015in 0 0;font-size:.085in;color:#6a7199}
 
-  .qrbox{background:#fff;border-radius:.14in;padding:.075in;box-shadow:0 .04in 0 rgba(0,0,0,.25)}
+  .qrbox{background:#fff;border-radius:.14in;padding:.075in;border:.03in solid var(--navy);box-shadow:0 .04in 0 var(--blue)}
   .qrbox img{display:block;width:.86in;height:.86in}
-  .scan{margin:.07in 0 0;font-size:.1in;font-weight:700;color:var(--yellow);text-align:center;line-height:1.2}
+  .scan{margin:.07in 0 0;font-size:.1in;font-weight:700;color:var(--navy);text-align:center;line-height:1.2}
 
   /* trim guide (preview only) */
-  .trim{position:absolute;inset:.125in;border:1px dashed rgba(255,255,255,.35);pointer-events:none;display:none}
+  .trim{position:absolute;inset:.125in;border:1px dashed rgba(30,44,112,.35);pointer-events:none;display:none}
   body.preview .trim{display:block}
 </style>
 </head>
 <body>
 <div class="card">
-  <div class="stripe"></div>
+  <div class="stripe"></div><div class="stripe stripe-b"></div>
   <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
   <div class="trim"></div>
   <div class="inner">
