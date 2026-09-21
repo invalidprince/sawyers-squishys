@@ -179,19 +179,17 @@
     btn.disabled = true;
     setStatus("Sending…", "busy");
 
-    fetch(ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        access_key: ACCESS_KEY,
-        subject: SUBJECT,
-        from_name: "Sawyer's Squishys Website",
-        name: name,
-        email: email,
-        message: message,
-        botcheck: false
-      })
-    })
+    // Use FormData (not JSON) so the request stays a CORS "simple request"
+    // and no preflight is needed — api.web3forms.com rejects OPTIONS preflights.
+    var fd = new FormData();
+    fd.append("access_key", ACCESS_KEY);
+    fd.append("subject", SUBJECT);
+    fd.append("from_name", "Sawyer's Squishys Website");
+    fd.append("name", name);
+    fd.append("email", email);
+    fd.append("message", message);
+
+    fetch(ENDPOINT, { method: "POST", body: fd })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (res) {
         if (res.ok && res.j && res.j.success) {
