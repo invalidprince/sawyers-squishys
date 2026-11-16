@@ -11,5 +11,15 @@
     "location": "York Expo Center, Memorial Hall West, 334 Carlisle Ave, York PA",
     "hours": "10am-5pm",
     "notes": "160+ vendors"
+  },
+  {
+    "name": "Toys for the Ages Expo 2027",
+    "dates": [
+      "2027-07-24",
+      "2027-07-25"
+    ],
+    "location": "All Star Sports Complex, 2638 Emmitsburg Rd, Gettysburg PA",
+    "hours": "Sat 8:30am-4pm, Sun 9am-3pm",
+    "notes": "toysfortheagesexpo.com"
   }
 ]
