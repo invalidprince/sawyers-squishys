@@ -156,6 +156,41 @@ p{margin:0 0 1em}
 .product h3{font-size:1.15rem;margin:0 0 .35rem}
 .product p{margin:0;color:var(--muted);font-weight:600;font-size:.95rem;line-height:1.45}
 .product a{color:var(--pink);font-weight:800}
+@media (min-width:560px){.product-wide{grid-column:1/-1}}
+
+/* ---------- BOOTH GALLERY ---------- */
+.booth-hero{margin:0 auto 1.2rem;max-width:420px;text-align:center}
+.booth-hero img{
+  width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow);
+  border:4px solid #fff;outline:3px solid var(--pink-soft);
+}
+.booth-hero figcaption{margin-top:.7rem;font-weight:800;color:var(--navy);font-size:.98rem}
+.gallery{display:grid;gap:.7rem;grid-template-columns:repeat(2,1fr)}
+@media (min-width:600px){.gallery{grid-template-columns:repeat(3,1fr)}}
+.gallery-item{display:block;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--blue-soft)}
+.gallery .gallery-item img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .2s ease}
+.gallery .gallery-wide{grid-column:1/-1}
+.gallery .gallery-wide img{aspect-ratio:4/3}
+@media (min-width:600px){.gallery .gallery-wide img{aspect-ratio:2/1}}
+.gallery-item:hover img{transform:scale(1.04)}
+
+.lightbox{
+  border:none;padding:0;background:transparent;max-width:100vw;max-height:100vh;
+  width:100vw;height:100vh;margin:0;
+}
+.lightbox[open]{display:flex;align-items:center;justify-content:center}
+.lightbox::backdrop{background:rgba(22,32,90,.9)}
+.lb-figure{margin:0;max-width:92vw;text-align:center}
+.lb-figure img{max-width:92vw;max-height:82vh;width:auto;height:auto;margin:0 auto;border-radius:16px}
+.lb-figure figcaption{color:#fff;font-weight:700;margin-top:.6rem;font-size:.95rem;padding:0 2.6rem}
+.lb-btn{
+  position:fixed;z-index:2;border:none;cursor:pointer;font-family:var(--font);font-weight:900;
+  width:48px;height:48px;border-radius:50%;background:#fff;color:var(--navy);font-size:1.6rem;line-height:1;
+  box-shadow:0 4px 0 rgba(0,0,0,.2);
+}
+.lb-close{top:12px;right:12px;font-size:1.2rem}
+.lb-prev{left:10px;top:50%;transform:translateY(-50%)}
+.lb-next{right:10px;top:50%;transform:translateY(-50%)}
 
 .events{display:grid;gap:1rem}
 .loading{text-align:center;color:var(--muted)}

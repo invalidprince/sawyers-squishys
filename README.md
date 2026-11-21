@@ -70,6 +70,7 @@ The script appends the event to `events.json`, then commits and pushes for you.
 | `add_event.sh`     | Helper to add an event + push                     |
 | `assets/logo.png`  | Logo                                              |
 | `assets/favicon.png` | Browser tab icon                                |
+| `assets/photos/`   | Booth photos (full ≤1280px + `thumbs/` 480px, EXIF/GPS stripped). `og-sawyer-booth.jpg` is the link-preview image |
 
 ## Contact form
 

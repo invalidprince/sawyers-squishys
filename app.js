@@ -204,4 +204,39 @@
       })
       .then(function () { btn.disabled = false; });
   });
+/* ============ BOOTH PHOTO LIGHTBOX ============ */
+  // Links point at the full-size photo, so without JS (or <dialog>) they still just open the image.
+  (function () {
+    var dlg = document.getElementById("lightbox");
+    var items = Array.prototype.slice.call(document.querySelectorAll("#booth .gallery-item"));
+    if (!dlg || typeof dlg.showModal !== "function" || !items.length) return;
+    var img = document.getElementById("lb-img");
+    var cap = document.getElementById("lb-cap");
+    var idx = 0;
+
+    function show(i) {
+      idx = (i + items.length) % items.length;
+      var a = items[idx];
+      img.src = a.getAttribute("href");
+      img.alt = (a.querySelector("img") || {}).alt || "";
+      cap.textContent = a.getAttribute("data-caption") || "";
+    }
+
+    items.forEach(function (a, i) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        show(i);
+        dlg.showModal();
+      });
+    });
+    dlg.querySelector(".lb-close").addEventListener("click", function () { dlg.close(); });
+    dlg.querySelector(".lb-prev").addEventListener("click", function () { show(idx - 1); });
+    dlg.querySelector(".lb-next").addEventListener("click", function () { show(idx + 1); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") show(idx - 1);
+      else if (e.key === "ArrowRight") show(idx + 1);
+    });
+    dlg.addEventListener("close", function () { img.src = "data:,"; });
+  })();
 })();
